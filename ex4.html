@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horloge</title>
+	<style type="text/css">
+		body {
+            font-family: Arial;
+            height:100%;
+            }
+         .horloge {
+            margin-top: 10%;
+            width: 100%;
+            text-align: center;
+            }
+         .data {
+            padding: 8px;
+            border-style: solid;
+            border-color: #4466AA;
+            border-width: 1px;
+            color: #4466AA;
+            font-size: 48pt;
+            font-weight: bold;
+            }
+	</style>
+</head>
+<body onload="afficheHeure()">
+	<div class="horloge" >
+		<span class="data" id="horloge" ></span>
+	</div>
+	<script type="text/javascript">
+		function afficheHeure(){
+			var date = new Date();
+			var horloge = document.getElementById('horloge');
+			horloge.innerText = date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
+			setTimeout(afficheHeure,1000);
+		}
+	</script>
+</body>
+</html>

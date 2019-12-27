@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	 .all{
+	 	background-color: lightgray;
+	 	margin-top: 200px;
+		border:4px ;
+		width :400px;
+		height: 150px;
+		text-align: center;
+		margin-left: 32%;
+	 }
+
+	 .middle{
+	 	background-color: white;
+	 	padding:10px;
+	 	margin-right:20px;
+	 	margin-left:20px;
+	 	/*margin-top:2px;*/
+	 }
+	.chrono{
+		width :300px;
+		height: 50px;
+	}
+</style> 
+</head>
+<body>
+
+	<div class='all'>
+		<div> .</div>
+		<div class="middle">
+			<div class="chrono">
+				<span>0 h </span>:
+				<span>0 min </span>:
+				<span>0 s </span>:
+				<span>0 ms </span>
+			</div>
+
+			<input type="button" class="btn" id="btnStart"  value="Start" onclick="Start()">
+			<input type="button" class="btn" id="btnStop" value="Stop" onclick="Stop()">
+			<input type="button" class="btn" id="btnReset"  value="Reset" onclick="Reset()">
+		</div>
+
+		<h3>chronomètre </h3>
+	</div>
+<script type="text/javascript" src="ex5.js"></script>
+
+</body>
+</html>

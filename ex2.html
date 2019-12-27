@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html onclick="alert('propagation dans l\'element html');">
+<head>
+	<title> Event bubbles</title>
+	<script type="text/javascript">
+		function init(){
+			document.body.onclick = docBodEvent;
+
+			function docEvent(){
+				alert("propagation dans l\'objet document");
+			}
+			event.cancelBubble = true;
+			function docBodEvent(){
+				alert("la propagation se fait dans le body.");
+			}
+		}
+
+	</script>
+</head>
+<body onload="init()">
+	<h1> Propagation des evenements</h1>
+	</hr>
+	<form onclick="alert('il se propage au formumaire')">
+		<input type="button" value="button" name="main1" onclick="alert('l\'evenement commence ou boutton: ' + this.name)">
+	</form>
+</body>
+</html>
